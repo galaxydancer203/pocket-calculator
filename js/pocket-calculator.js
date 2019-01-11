@@ -1,5 +1,5 @@
-var number1 = [];
-var number2 = [];
+var display = [];
+var number = [0];
 var sign = []
 // function button1() {
 //   var p = document.getElementById("display");
@@ -50,8 +50,9 @@ var sign = []
 //   p.innerHTML += "0";
 //   numbers.push(0)
 // }
-function bPress(x){
+function numbuttonPress(x){
+  var p = document.getElementById("display");
+  p.innerHTML += x;
 
-  
 }
 console.log(numbers);

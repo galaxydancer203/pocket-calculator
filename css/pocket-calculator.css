@@ -1,7 +1,10 @@
 .grid-container{
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-columns: 150px 150px 150px 150px ;
   grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  border-style: solid;
+  padding: 1px;
+  border-width: 4px;
 }
 
 .display{
@@ -10,9 +13,9 @@ grid-column-end: 5;
 border-style: solid;
 border-width: 3px;
 text-align: right;
-font-size: 100px;
-line-height: 100px;
-
+font-size: 90px;
+line-height: 90px;
+background-color: white;
 }
 .function{
   background-color: #4CAF50;
@@ -26,7 +29,6 @@ line-height: 100px;
   background-color: #ff4040;
   font-size: 50px;
 }
-/* .everythingcal{
-  box-sizing: border-box;
-  margin: 0 auto;
-} */
+html{
+  background-color: #f08080;
+}
