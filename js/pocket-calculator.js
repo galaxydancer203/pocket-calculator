@@ -6,13 +6,19 @@ var sign = "";
 var firstdigit = true;
 var q = 0;
   var z = 0;
+
+  var p = document.getElementById("display");
+  if(p.length==9){
+    alert("ss")
+  }
+
+
 function numbuttonPress(x){
   var p = document.getElementById("display");
   if (firstdigit){
     p.innerHTML = x;
    firstdigit = false;
   }
-
   else if (sign != "" && q == 0){
     p.innerHTML = x;
     q++;
@@ -20,42 +26,38 @@ function numbuttonPress(x){
 
 else {
   p.innerHTML += x;
-}
-
+  }
 }
 
 function functionadd(){
 var p = document.getElementById("display");
+z = 0;
 numberpast = p.innerHTML;
-console.log(numberpast);
+p.innerHTML = 0;
   sign = "+";
-  console.log(sign);
   q = 0;
 }
 
 function functionsub(){
 var p = document.getElementById("display");
 numberpast = p.innerHTML;
-console.log(numberpast);
+p.innerHTML = 0;
   sign = "-";
-    console.log(sign);
   q = 0;
 }
 
 function functionmult(){
 var p = document.getElementById("display");
 numberpast = p.innerHTML;
-console.log(numberpast);
+p.innerHTML = 0;
   sign = "x";
-    console.log(sign);
   q = 0;
 }
 function functiondivide(){
   var p = document.getElementById("display");
   numberpast = p.innerHTML;
-  console.log(numberpast);
+  p.innerHTML = 0;
     sign = "÷";
-      console.log(sign);
     q = 0;
 }
 function functionnegative(){
@@ -87,26 +89,26 @@ z = 1;
 
 function functionequal(){
   var p = document.getElementById("display");
-  var firstnum = Number(numberpast);
   var secondnum = Number(p.innerHTML);
-  
+  var firstnum = Number(numberpast);
+
   if(sign == "+"){
-    p.innerHTML = firstnum + secondnum;
-    numberpast = p.innerHTML;
+    p.innerHTML = firstnum+secondnum;
+    console.log(secondnum);
+    console.log("0");
+    console.log(firstnum);
   }
   if(sign == "-"){
     p.innerHTML = firstnum - secondnum;
-    numberpast = p.innerHTML;
   }
   if(sign == "x"){
     p.innerHTML = firstnum*secondnum;
-    numberpast = p.innerHTML;
   }
   if(sign == "÷"){
     p.innerHTML = firstnum/secondnum;
-    numberpast = p.innerHTML;
   }
     q = 0;
     z = 0;
+ ////decimal
 
-}
+ }
